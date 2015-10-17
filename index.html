@@ -1,187 +1,221 @@
-
- <!DOCTYPE HTML>
-<html >
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   
-    <title>Kylin&#39;s Blog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
-    
-    <meta name="author" content="Kylin">
-    
-    
-    
-    
-    
-    <link rel="icon" href="/img/favicon.ico">
-    
-    
-    <link rel="apple-touch-icon" href="/img/pacman.jpg">
-    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
-    
-    <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <title>Kylin&#39;s Blog</title>
+  <meta name="author" content="Kylin">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="Kylin&#39;s Blog"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href=”/favicon.ico” rel=”icon” type=”image/x-ico”>
+  <link rel="alternate" href="/atom.xml" title="Kylin&#39;s Blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
 </head>
 
-  <body>
-    <header>
-      <div>
-		
-			<div id="imglogo">
-				<a href="/"><img src="/img/logo.svg" alt="Kylin&#39;s Blog" title="Kylin&#39;s Blog"/></a>
-			</div>
-			
-			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="Kylin&#39;s Blog">Kylin&#39;s Blog</a></h1>
-				<h2 class="blog-motto">Code left, life right</h2>
-			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
-			</a></div>
-			<nav class="animated">
-				<ul>
-					
-						<li><a href="/">Home</a></li>
-					
-						<li><a href="/archives">Archives</a></li>
-					
-					<li>
-					
-					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
-						<label>Search</label>
-						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
-						<input type="hidden" name="q" value="site:kylinv.com">
-					</form>
-					
-					</li>
-				</ul>
-			</nav>			
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Kylin&#39;s Blog</a></h1>
+  <h2><a href="/">Code left, life right</a></h2>
 </div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-10-17T03:02:03.000Z"><a href="/2015/10/17/hexo/">2015-10-17</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2015/10/17/hexo/">Hexo 教程</a></h1>
+  
 
     </header>
-    <div id="container">
-      <div id="main">
+    <div class="entry">
+      
+        <p>这两天用 Hexo 搭建了自己的博客，期间跌跌撞撞出现了很多问题（总感觉自己有容易报错的体质，o(╯□╰)o），所以打算写个啰啰嗦嗦的教程，以便于自己日后去看。就酱！  </p>
+<h2 id="安装">安装</h2><p>在安装 Hexo 之前，需要先确认电脑中是否已安装下列程序： </p>
+<ul>
+<li>Node.js  </li>
+<li>Git   </li>
+</ul>
+<p>如果没有安装，可以移步 <a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">hexo安装</a> </p>
+<p>接着，就可以安装 Hexo 啦~<br>打开终端，啪啪啪输入  </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="operator"><span class="keyword">install</span> -<span class="keyword">g</span> hexo-cli</span></span><br></pre></td></tr></table></figure>
+<p>然而，报错了  </p>
+<p><img src="http://7xnl4x.com1.z0.glb.clouddn.com/installError.jpg" alt="权限错误">  </p>
+<p>系统说：“No, 你不是管理员。”<br>好吧，加上 sudo 再试一次，这次安装的时候会提示让你输入密码。 </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm <span class="operator"><span class="keyword">install</span> -<span class="keyword">g</span> hexo-cli</span></span><br></pre></td></tr></table></figure>
+<p>安装成功啦~</p>
+<h2 id="建站">建站</h2><p>安装 Hexo 完成后，执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。  </p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo init &lt;folder&gt;   <span class="regexp">//</span>例如：<span class="variable">$ </span>hexo init myblog，如果没有设置 folder ，<span class="constant">Hexo</span> 就会默认在当前文件夹建立网站啦</span><br><span class="line"><span class="variable">$ </span>cd &lt;folder&gt;</span><br><span class="line"><span class="variable">$ </span>npm install</span><br></pre></td></tr></table></figure>
+<p>新建完成后，myblog 文件夹的目录如下：  </p>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">|<span class="string">-- _config.yml    //这里放着网站的配置信息，可以在此配置大部分参数</span><br><span class="line"></span>|<span class="string">-- package.json   //应用程序的信息</span><br><span class="line"></span>|<span class="string">-- scaffolds      //模板文件夹，当新建文章时，Hexo 会根据 scaffold 来建立文件</span><br><span class="line"></span>|<span class="string">-- scripts        //脚本文件夹，此文件夹中的 JavaScript 文件会被自动执行</span><br><span class="line"></span>|<span class="string">-- source         //存放用户资源。除了 _posts 文件夹之外，开头命名为 _ 的文件/文件夹和隐藏的文件会被忽略。</span><br><span class="line"></span>|<span class="string">   </span>|<span class="string">-- _drafts    </span><br><span class="line"></span>|<span class="string">   </span>|<span class="string">-- _posts     </span><br><span class="line"></span>|<span class="string">-- themes         //主题文件夹。Hexo 会根据主题来生成静态页面。</span></span><br></pre></td></tr></table></figure>
+<p>接下来就开始配置你的网站信息。打开 myblog下的 _config.yml 文件  </p>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># Site</span></span><br><span class="line"><span class="label">title:</span>             //给你的博客取一个喜欢的名字叭</span><br><span class="line"><span class="label">subtitle:</span>          //加个副标题怎么样</span><br><span class="line"><span class="label">description:</span>       //这个是给搜索引擎看的</span><br><span class="line"><span class="label">author:</span>            //写上你的大名</span><br><span class="line"><span class="label">language:</span></span><br><span class="line"><span class="label">timezone:</span></span><br></pre></td></tr></table></figure>
+<p>如果想查看关于 _config.yml 的详细信息，请移步 <a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="external">Hexo配置</a>  </p>
+<p>修改完后，就让我们在本地预览一下，首先在建立网站的文件夹目录下打开终端，然后输入：  </p>
+<figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g        <span class="comment">//生成静态文件</span></span><br><span class="line">$ hexo <span class="keyword">server</span>   <span class="comment">//启动服务器</span></span><br></pre></td></tr></table></figure>
+<p>现在，打开浏览器输入 localhost：4000 ，就可以在本地预览啦~ 默认主题是这个样子的。（图是网上找的）  </p>
+<p><img src="http://7xnl4x.com1.z0.glb.clouddn.com/landscape.png" alt="landscape">  </p>
+<p>当然，这个时候别人是看不到的。可是，搭博客怎么能只给自己看呢，让我们把它部署到 GitHub 上去吧。  </p>
+<h2 id="部署">部署</h2><p>首先注册一个 GitHub 的账号。然后，创建一个库（Repository），完成以后会出现类似下图的一个界面：</p>
+<p><img src="http://7xnl4x.com1.z0.glb.clouddn.com/repository.png" alt="reposity">  </p>
+<p>仍然是在 myblog 目录下打开终端，这次我们要安装 hexo-deployer-git 。  </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="operator"><span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></span></span><br></pre></td></tr></table></figure>
+<p>安装完成后，打开 myblog下的 _config.yml 文件修改配置:    </p>
+<figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: http:<span class="comment">//hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="keyword">type</span>: git</span><br><span class="line">  repo: &lt;repository url&gt;  <span class="comment">//就是刚刚在 GitHub 上创建的库的地址啦</span></span><br><span class="line">  branch: [branch]        <span class="comment">//使用 GitHub 或 GitCafe 的话，系统会自动检测，这里不用填</span></span><br><span class="line">  <span class="keyword">message</span>: [<span class="keyword">message</span>]      <span class="comment">//自定义提交信息（默认为 Site updated: &#123;&#123; now("YYY-MM-DD HH:mm:ss") &#125;&#125; ）,同样可以不填</span></span><br></pre></td></tr></table></figure>
+<p>接着执行下列指令：  </p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo g</span><br><span class="line"><span class="variable">$ </span>hexo d</span><br></pre></td></tr></table></figure>
+<p>当当当，浏览器访问 kylinv.github.io/myblog 就可以看到刚刚搭建的网站啦~(≧▽≦)/~<br>等等，似乎哪里不太对劲Σ(⊙▽⊙” ，命令失败了，页面打不开。哦，我还没有设置 SSH 。</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">"email"</span> <span class="comment">//输入你注册GitHub时的邮箱地址</span></span><br></pre></td></tr></table></figure>
+<p>输完以后一路回车，直到出现一大段文字，其中有：</p>
+<p><img src="http://7xnl4x.com1.z0.glb.clouddn.com/ssh.png" alt="set ssh">   </p>
+<p>打开 id_rsa.pub 文件，复制里面的内容。<br>然后浏览器打开 GitHub ，登录后找到 setting - SSH keys - Add SSH key ，把刚刚复制的内容粘贴到 key 里面。<br>再试一次</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo g</span><br><span class="line"><span class="variable">$ </span>hexo d</span><br></pre></td></tr></table></figure>
+<p>浏览器访问 kylinv.github.io/myblog ，这次可以看到页面了，然而。。。</p>
+<p><img src="http://7xnl4x.com1.z0.glb.clouddn.com/root.png" alt="root"><br>样式呢？样式呢？看看报错：</p>
+<p><img src="http://7xnl4x.com1.z0.glb.clouddn.com/nocss.png" alt="nocss">   </p>
+<p>这是因为在 _config.yml 文件中，</p>
+<p><img src="http://7xnl4x.com1.z0.glb.clouddn.com/errorroot.png" alt="errorroot">  </p>
+<p>而事实上网站的文件都在 myblog 下，所以要把 root：设成 /blog/ 。当然这里可以不更改，因为我们还要把自己的域名和 GitHub 绑定。</p>
+<h2 id="绑定">绑定</h2><p>首先，购买一个域名。<br>在 source 目录下添加 CNAME 文件，打开，在里面写上自己的域名。<br>然后解析域名。  </p>
+<p><img src="http://7xnl4x.com1.z0.glb.clouddn.com/yuming.png" alt="yuming">  </p>
+<p>查看记录值的方式，在终端中输入 ping + 网址（kylinv.github.io） ，会返回一个地址，把它复制粘贴到记录值中。<br>其他的看购买域名的网站上的一步步指引就可以啦~<br>当然，不要忘了把 CNAME 文件传到 GitHub 上去。囧</p>
+<p>最后，就是这个样子的。  </p>
+<p><img src="http://7xnl4x.com1.z0.glb.clouddn.com/myblog.png" alt="myblog"></p>
 
-  <section class="post" itemscope itemprop="blogPost">
-  
-    <a href="/2015/10/17/hexo/" title="Hexo 教程" itemprop="url">
-  
-    <h1 itemprop="name">Hexo 教程</h1>
-    
-     
-           <p itemprop="description" >这两天用 Hexo 搭建了自己的博客，期间跌跌撞撞出现了很多问题（总感觉自己有容易报错的体质，o(╯□╰)o），所以打算写个啰啰嗦嗦的教程，以便于自己日后去看。就酱！  
-安装在安装 Hexo 之前，需要先确认电脑中是否已安装下列程序： 
-
-Node.js  
-Git   
-
-如</p>
+      
+    </div>
+    <footer>
+      
         
-    
-    <time datetime="2015-10-17T03:02:03.000Z" itemprop="datePublished">2015-10-17</time>
-  </a>
-</section>
-
-  <section class="post" itemscope itemprop="blogPost">
-  
-    <a href="/2015/10/15/hello-world/" title="Hello World" itemprop="url">
-  
-    <h1 itemprop="name">Hello World</h1>
-    
-     
-           <p itemprop="description" >Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the </p>
         
-    
-    <time datetime="2015-10-15T13:22:27.000Z" itemprop="datePublished">2015-10-15</time>
-  </a>
-</section>
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
 
 
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-10-15T13:22:27.000Z"><a href="/2015/10/15/hello-world/">2015-10-15</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2015/10/15/hello-world/">Hello World</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+
+<nav id="pagination">
+  
+  
+  <div class="clearfix"></div>
+</nav></div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//www.baidu.com/s" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜尋">
+    <input type="hidden" name="q" value="site:kylinv.com">
+  </form>
 </div>
-      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
-
-<div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
-<aside class="clearfix">
 
   
 
   
+<div class="widget tag">
+  <h3 class="title">標籤</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/hexo/">hexo</a><small>1</small></li>
+  
+  </ul>
+</div>
 
 </aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2015 Kylin
+  
 </div>
-    </div>
-    <footer><div id="footer" >
-	
-	<div class="line">
-		<span></span>
-		<div class="author"></div>
-	</div>
-	
-	
-	<div class="social-font clearfix">
-		
-		
-		
-		
-		
-	</div>
-		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2015 
-		
-		<a href="http://kylinv.com" target="_blank" title="Kylin">Kylin</a>
-		
-		</p>
-</div>
-</footer>
-    <script src="/js/jquery-2.1.0.min.js"></script>
+<div class="clearfix"></div></footer>
+  <script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
 <script type="text/javascript">
-$(document).ready(function(){ 
-  $('.navbar').click(function(){
-    $('header nav').toggleClass('shownav');
-  });
-  var myWidth = 0;
-  function getSize(){
-    if( typeof( window.innerWidth ) == 'number' ) {
-      myWidth = window.innerWidth;
-    } else if( document.documentElement && document.documentElement.clientWidth) {
-      myWidth = document.documentElement.clientWidth;
-    };
-  };
-  var m = $('#main'),
-      a = $('#asidepart'),
-      c = $('.closeaside'),
-      o = $('.openaside');
-  $(window).resize(function(){
-    getSize(); 
-    if (myWidth >= 1024) {
-      $('header nav').removeClass('shownav');
-    }else
-    {
-      m.removeClass('moveMain');
-      a.css('display', 'block').removeClass('fadeOut');
-      o.css('display', 'none');
-        
-    }
-  });
-  c.click(function(){
-    a.addClass('fadeOut').css('display', 'none');
-    o.css('display', 'block').addClass('fadeIn');
-    m.addClass('moveMain');
-  });
-  o.click(function(){
-    o.css('display', 'none').removeClass('beforeFadeIn');
-    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
-    m.removeClass('moveMain');
-  });
-  $(window).scroll(function(){
-    o.css("top",Math.max(80,260-$(this).scrollTop()));
-  });
-});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
 </script>
 
-
-
-
-
-
-
-  </body>
- </html>
+</body>
+</html>
