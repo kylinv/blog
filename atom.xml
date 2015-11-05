@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Code left, life right]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://kylinv.com/"/>
-  <updated>2015-11-05T15:30:02.000Z</updated>
+  <updated>2015-11-05T15:35:38.000Z</updated>
   <id>http://kylinv.com/</id>
   
   <author>
@@ -15,11 +15,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[FreeMarker教程]]></title>
-    <link href="http://kylinv.com/2015/11/05/HelloFreeMarker/"/>
-    <id>http://kylinv.com/2015/11/05/HelloFreeMarker/</id>
+    <title><![CDATA[FreeMarker入门小教程]]></title>
+    <link href="http://kylinv.com/2015/11/05/FreeMarker%E5%85%A5%E9%97%A8%E5%B0%8F%E6%95%99%E7%A8%8B/"/>
+    <id>http://kylinv.com/2015/11/05/FreeMarker入门小教程/</id>
     <published>2015-11-05T15:23:18.000Z</published>
-    <updated>2015-11-05T15:30:02.000Z</updated>
+    <updated>2015-11-05T15:35:38.000Z</updated>
     <content type="html"><![CDATA[<p>这个教程是使用 FreeMarker 框架写一个简单的 Hello 的小页面。因为是第一次接触框架也是第一次使用 Eclipse 这个软件所以教程写的有点繁琐。<br>FreeMarker是一个用Java语言编写的模板引擎，它基于模板来生成文本输出。原理如下图：</p>
 <p><img src="http://7xnl4x.com1.z0.glb.clouddn.com/principle.png" alt="principle">  </p>
 <h2 id="项目结构：">项目结构：</h2><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">－项目名称  </span><br><span class="line"><span class="string">|-- Java Resources  </span></span><br><span class="line">   <span class="string">|-- SRC            //JAVA存放目录</span></span><br><span class="line">   <span class="string">|-- Libraries</span></span><br><span class="line"><span class="string">|-- WebContent        //WEB文件目录</span></span><br><span class="line">   <span class="string">|-- WEB-INF</span></span><br><span class="line">      <span class="string">|-- lib         //jar包目录</span></span><br><span class="line">      <span class="string">|-- templates   //ftl文件目录</span></span><br><span class="line">      <span class="string">|-- web.xml     //WEB配置文件</span></span><br></pre></td></tr></table></figure>
@@ -52,6 +52,8 @@
     <![CDATA[<p>这个教程是使用 FreeMarker 框架写一个简单的 Hello 的小页面。因为是第一次接触框架也是第一次使用 Eclipse 这个软件所以教程写的有点繁琐。<br>FreeMarker是一个用Java语言编写的模板引擎，它基于模板来生成文本输出。原理如下图：</p>
 <]]>
     </summary>
+    
+      <category term="FreeMarker" scheme="http://kylinv.com/tags/FreeMarker/"/>
     
   </entry>
   
