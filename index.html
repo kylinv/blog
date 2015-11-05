@@ -51,6 +51,59 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2015-11-05T15:09:45.000Z"><a href="/2015/11/05/tomcat/">2015-11-05</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2015/11/05/tomcat/">tomcat</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h1 id="Tomcat_安装">Tomcat 安装</h1><h2 id="简介：">简介：</h2><p>Tomcat是一个 Web 应用服务器。  </p>
+<p>P.s :关于 Apache 和 Tomcat 的区别：  </p>
+<ul>
+<li>Apache 是 Web 服务器，Tomcat 是应用（java）服务器，它是一个 servlet 容器，是 Apache 的扩展。  </li>
+<li>Apache 和 Tomcat 都可以作为独立的 Web 服务器来运行，但是 Apache 是普通服务器，本身只支持 HTML 即普通网页，不能解释 java 程序（jsp,servlet）（需要插件）。<blockquote>
+<p>可以将 Apache 看作是一辆卡车，上面可以装一些东西，比如 HTML 等，但是不能装水，要装水需要有容器，Tomcat 就是一个容器，这个桶可以装水，而且也可以不放在卡车上。   </p>
+</blockquote>
+</li>
+<li>Apache 只支持静态网页，像 asp,php,cgi,jsp等动态网页就需要 Tomcat 来处理。</li>
+<li>Tomcat 处理静态 HTML 的能力不如 Apache。 </li>
+</ul>
+<p>P.P.s: WAMP = Windows + Apache + Myscql + PHP  </p>
+<h2 id="安装：">安装：</h2><p>在官网下载 Tomcat 包，将文件夹命名为 Tomcat，并移动到根目录 /Library 中（可以选择其他的路径）。<br>Tips :选择 Finder “前往”下拉菜单，按住 option 键就会出现“资源库”的选项。<br>打开终端，执行  </p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sh <span class="regexp">/Library/</span>Tomcat<span class="regexp">/bin/</span>startup.sh</span><br></pre></td></tr></table></figure>
+<p>作为拥有易报错体质的我，系统当然不会那么轻易地放过我，系统提示： No such file or directory。<br>好吧，让我们设置下文件权限：</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">sudo</span> chmod <span class="number">755</span> Library/Tomcat/bin/<span class="regexp">*.sh</span></span><br><span class="line">sudo chmod <span class="number">755</span> Library/Tomcat/bin/<span class="regexp">*.bat</span></span><br><span class="line">然后再次执行：</span><br><span class="line">sudo sh /Library/Tomcat/bin/startup.sh</span><br></pre></td></tr></table></figure>
+<p>当出现下图时则表明 Tomcat 执行成功  </p>
+<p><img src="http://7xnl4x.com1.z0.glb.clouddn.com/startup.png" alt="startup">    </p>
+<p>这个时候打开浏览器，在地址栏输入：localhost：8080 会出现一个类似的界面<br><img src="http://7xnl4x.com1.z0.glb.clouddn.com/tomcat.png" alt="tomcat">  </p>
+<p>到此为止 Tomcat 就安装成功了。关闭只需在终端输入： </p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sh <span class="regexp">/Library/</span>Tomcat<span class="regexp">/bin/</span>shutdown.sh</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2015-10-17T03:02:03.000Z"><a href="/2015/10/17/hexo/">2015-10-17</a></time>
       
       
